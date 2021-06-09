@@ -307,13 +307,13 @@ teste4.src = '04.mp3';
      
       map.on("load", function() {
         map.addLayer({
-          id: "loudnesssample-b4qn75",
+          id: "loudness",
           type: "circle",
           source: {
             type: "vector",
             url: "mapbox://foteinou.5e591j4o"
           },
-          "source-layer": "loudnesssample-b4qn75",
+          "source-layer": "loudness",
           paint: {
             "circle-radius": 
            7,
@@ -337,7 +337,7 @@ teste4.src = '04.mp3';
       
  
 
-      map.on("mouseenter", "loudnesssample-b4qn75", function(e) {
+      map.on("mouseenter", "loudness", function(e) {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = "pointer";
   
@@ -400,7 +400,7 @@ teste4.src = '04.mp3';
           .addTo(map);
       });
 
-      map.on("mouseleave", "loudnesssample-b4qn75", function() {
+      map.on("mouseleave", "loudness", function() {
         map.getCanvas().style.cursor = "";
         popup.remove();
       });
