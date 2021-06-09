@@ -25,17 +25,17 @@ var bleep = new Audio();
   var bleep2 = new Audio();
   var bleep3 = new Audio();
   var bleep4 = new Audio();
-  var bleep5 = new Audio();
+  
   bleep.src = "01.mp3";
   bleep2.src = "02.mp3";
   bleep3.src = "03.mp3";
   bleep4.src = "04.mp3";
-  bleep5.src = "05.mp3";
+  
   bleep.load();
   bleep2.load();
   bleep3.load();
   bleep4.load();
-  bleep5.load();
+ 
   
 function loadContent(num){
    if (num==1){
@@ -50,9 +50,7 @@ function loadContent(num){
         else if (num==4){
           bleep4.play(); // Play button sound now
         }
-   else if (num==5){
-          bleep5.play(); // Play button sound now
-        }
+  
 }
  
 </script>
@@ -176,7 +174,7 @@ h5 {font-family: "Times New Roman", serif;
 
   .my-soundlegend .soundlegend-scale ul {
     margin: 0;
-    padding: 0;
+    padding: 0.1;
     float: left;
     list-style: none;
     }
@@ -232,7 +230,7 @@ h5 {font-family: "Times New Roman", serif;
     <span class="button b-close">
         <span>x</span>
     </span>
-    <h3><b>Καλώς ήρθατε στον Οπτικοακουστικό Άτλαντα Πυρκαγιών!</b></h3>
+    <h3><b>Καλώς ήρθατε στον Οπτικοακουστικό Χάρτη Πυρκαγιών!</b></h3>
     <h5>Τρόπος λειτουργίας</h5>
   <h4>  Μόλις ο κέρσορας φτάσει πάνω από ένα σύμβολο ένδειξης της θέσης εκδήλωσης της πυρκαγιάς αναπαράγεται ήχος συγκεκριμένης έντασης που αντιστοιχεί στην κατηγορία εκδήλωσης της πυρκαγιάς (σε ημέρες). Οι αναπαραγόμενοι ήχοι έχουν διαδοχικά μεταξύ τους διαφορά ως προς την ένταση της τάξης των 8dB αντίστοιχα με την κατηγορία στην οποία ανήκει η εν λόγω πυρκαγιά. Προκειμένου η εφαρμογή να δουλέψει σωστά ενδείκνυται να μην γίνονται γρήγορες εναλλαγές ανάμεσα στα σύμβολα. </h4>
 </div>
@@ -243,14 +241,14 @@ var teste1 = new Audio();
 var teste2 = new Audio();
 var teste3 = new Audio();
 var teste4 = new Audio();
-var teste5 = new Audio();
+
 
 
 teste1.src = '01.mp3';
 teste2.src = '02.mp3';
 teste3.src = '03.mp3';
 teste4.src = '04.mp3';
-teste5.src = '05.mp3';
+
 
 
 </script>
@@ -267,10 +265,9 @@ teste5.src = '05.mp3';
  </div>  
 <div class='soundlegend-scale'>
   <ul class='soundlegend-labels' >
-    <li><span style='background:#FFFFFF;hover span{ color:red}; border: 1px solid grey;height: 10px;'onmouseover="teste1.play()"></span><=10</li>
-    <li><span style='background:#FFFFFF; border: 1px solid grey;height: 13px;'onmouseover="teste2.play()"></span><=20</li>
+    <li><span style='background:#FFFFFF; border: 1px solid grey;height: 13px;'onmouseover="teste2.play()"></span><=15</li>
     <li><span style='background:#FFFFFF; border: 1px solid grey;height: 16px;'onmouseover="teste3.play()"></span><=30</li>
-    <li><span style='background:#FFFFFF; border: 1px solid grey;height: 19px;'onmouseover="teste4.play()"></span><=40</li>
+    <li><span style='background:#FFFFFF; border: 1px solid grey;height: 19px;'onmouseover="teste4.play()"></span><=60</li>
      <li><span style='background:#FFFFFF; border: 1px solid grey;height: 21px;'onmouseover="teste5.play()"></span><=130</li>
   </ul>
 </div>
@@ -344,21 +341,19 @@ teste5.src = '05.mp3';
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = "pointer";
   
-        if (e.features[0].properties.duration<=10){
+        if (e.features[0].properties.duration<=15){
           loadContent(1);
         }
-        else if (e.features[0].properties.duration<=20){
+        else if (e.features[0].properties.duration<=30){
           loadContent(2);
         }
-         else if (e.features[0].properties.duration<=30){
+         else if (e.features[0].properties.duration<=60){
           loadContent(3);
         }
-         else if (e.features[0].properties.duration<=40){
+         else if (e.features[0].properties.duration<=130){
           loadContent(4);
         }
-        else if (e.features[0].properties.duration<=131){
-          loadContent(5);
-        }
+        
       
         
   
